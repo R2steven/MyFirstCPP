@@ -6,7 +6,7 @@
     "configurations": [
         {
             "preLaunchTask": "C/C++: build",
-            "name": "(gdb) Launch",
+            "name": "(gdb) Debug",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -23,6 +23,15 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+        {
+            "name": "(clang++) Debug",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "C/C++: clang++.exe build active file"
         }
     ]
 }
